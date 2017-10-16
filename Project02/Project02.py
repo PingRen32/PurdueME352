@@ -61,6 +61,7 @@ for t_2 in range(0,360,1):
     # Calculate for Position
     t_2 = degreetoradius(t_2)
     delta_R_c, delta_t_3, delta_R_51, delta_t_4 = 1,1,1,1
+    # Position loop, as far as the delta is larger than the resolution, it will maintain looping for better result
     while (abs(delta_t_3) >= resolution) & (abs(delta_R_c) >= resolution):
         a1 = [[cos(t_c),R_3*sin(t_3)],[sin(t_c),-R_3*cos(t_3)]]
         b1 = [[R_2*cos(t_2)+R_3*cos(t_3)-R_c*cos(t_c)],[R_2*sin(t_2)+R_3*sin(t_3)-R_c*sin(t_c)-R_11]]
